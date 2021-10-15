@@ -1,0 +1,76 @@
+<%- include("./partials/header") %>
+
+
+    <div id="background">
+        
+        
+        <div class="content">
+            <div id="bt"><a id="bt"href="/" class="btn btn-primary mb-5">Go Back</a>   </div>
+              
+      <div class="giris">
+        
+      <section class="forms-section">
+    
+        <h1 class="section-title"></h1>
+        <div class="forms">
+           
+    
+          <div class="form-wrapper is-active">
+    
+    <button type="button" class="switcher switcher-login">
+        Login
+        <span class="underline"></span>
+      </button>
+    
+    <form class="form form-login" action="/login" method="POST">
+        <fieldset>
+        
+            <div class="input-block">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+    
+      
+            <div class="input-block">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+        </div>
+    
+    </fieldset>
+        <button type="submit" class="btn btn-primary"> LOGIN </button>
+    </form>
+</div>
+
+
+<div class="form-wrapper">
+    <button type="button" class="switcher switcher-signup">
+      Sign Up
+      <span class="underline"></span>
+    </button>
+    
+    <form  class="form form-signup" action="/register" method="POST">
+        <fieldset>
+       
+            <div class="input-block">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        
+    </div>
+        
+            <div class="input-block">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+        </div>
+    
+    </fieldset>
+        <button type="submit" class="btn btn-primary">REGISTER</button>
+    </form>
+</div>
+</div>
+        
+</section>
+
+
+<%- include("./partials/footer") %>

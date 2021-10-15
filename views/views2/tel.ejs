@@ -1,0 +1,47 @@
+<%- include('header.html') -%>
+
+
+<div class="c">
+
+
+
+  <form>
+
+    <div class="group">
+      <input type="text" id="txtdeger" required >
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Temperature Value</label>
+      ON:<input type="checkbox" id="on"  value="on" checked>
+      
+      <button type="submit">Submit</button>
+    </div>
+    
+    
+
+
+
+  </form>
+</div>
+
+
+
+<script>
+const toggleSwitch = document.querySelector('.toggle-button');
+
+function switchTheme(e) {
+if(e.target.checked) {
+  document.documentElement.setAttribute('data-theme', 'dark');
+} else {
+  document.documentElement.setAttribute('data-theme', 'light');
+}
+}
+
+toggleSwitch.addEventListener('change', switchTheme, false);
+
+
+var ad=document.getElementById("txtAd");
+alert(ad.value)
+
+</script>
+<%- include('footer.html') -%>

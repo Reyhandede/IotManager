@@ -1,0 +1,78 @@
+<%- include('header.html') -%>
+
+
+
+<style> 
+    [main]{padding:30px; } 
+    #graphics > *{
+        margin: 1.8em;
+        display:block!important;
+        padding: 1%;
+        float:left;
+       
+        font-weight: bold;
+        
+        background: rgba(48, 55, 88, 0.5) /* Green background with 30% opacity */
+        
+
+  
+        
+    }
+    h1{
+        color:inherit;
+    }
+
+
+</style>
+
+<h1>STATUS </h1>
+
+    <div id="graphics">
+    
+        <!-- 
+            <div id="map1" style="height:300px;width:100%;"></div>
+        -->
+    
+       
+    </div>
+
+
+
+
+<script>
+    function initMap() {
+        map = L.map(document.getElementById("map1")).setView([51.505, -0.09], 14 );
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        marker =L.marker([51.5, -0.09]).addTo(map)
+        //marker.setLatLng([51.504, -0.09])
+        //map.setView([51.505, -0.09], 14 )
+    }
+
+    window.addEventListener("DOMContentLoaded",function(){      
+        
+
+        App.ui.chart2({token:"0000",sensor:"temperature",label:"TEMPERATURE",color:"white"}  ,  $("#graphics"))
+
+        App.ui.chart({token:"0000",sensor:"humidity",label:"HUMIDITY",color:"white"}  ,  $("#graphics"))
+       
+
+        App.ui.map({token:"0000",sensor:"position",label:"TRACTOR 1",color:"green",zoom:2}  ,  $("#graphics"))
+        
+        //initMap();
+
+    })
+</script>
+
+
+
+
+
+    
+
+
+
+<%- include('footer.html') -%>
